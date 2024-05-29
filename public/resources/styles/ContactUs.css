@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: linear-gradient(to right, rgba(83, 164, 112, 0.7), rgba(172, 182, 229, 0.7)), 
+                url('../images/Pet.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h6 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1e90ff; /* Changed color to DodgerBlue */
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.name, .email, .message-box {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.name i, .email i, .message-box i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #d2da7b;
+}
+
+.name input, .email input, .message-box textarea {
+    width: 100%;
+    padding: 15px 45px;
+    border: 2px solid #9eb970;
+    outline: none;
+    font-size: 1rem;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.name input:focus, .email input:focus, .message-box textarea:focus {
+    background-color: #fff9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.name input::placeholder, .email input::placeholder, .message-box textarea::placeholder {
+    color: #ccc;
+    font-weight: 500;
+}
+
+.message-box textarea {
+    height: 100px;
+    resize: none;
+}
+
+.button {
+    width: 100%;
+    text-align: center;
+}
+
+.button button {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(45deg, #c34baf, #c34baf );
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button button:hover {
+    background: linear-gradient(45deg, #e58f32, #e58f32);
+    transform: translateY(-3px);
+}
+
+.message {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.message .success, .message .danger {
+    font-size: 1rem;
+    position: absolute;
+    animation: buttons 0.3s linear;
+    display: none;
+}
+
+.message .success {
+    color: rgb(6, 63, 87);
+}
+
+.message .danger {
+    color: red;
+}
+
+@keyframes buttons {
+    0% {
+        transform: scale(0.1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
